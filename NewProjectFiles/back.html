@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<script> 
+
+	function calcsz() 
+	{ 
+	  
+	  var form = document.forms["numform"];
+	  var val1 = form.elements["w1"];
+	  var val2 = form.elements["w2"];
+	  
+	  
+	  var newnum = val1.value * 1.15 * .775;
+	  var newnum2 = val2.value * 1.15 * .775;
+	  
+	  var set1 = rounds(newnum * .6);
+	  var set2 = rounds(newnum * .65);
+	  var set3 = rounds(newnum * .7);
+	  var set4 = rounds(newnum * .75);
+	  var set5 = rounds(newnum * .775);
+	  var set6 = rounds(newnum * .80);
+	  
+
+	  var set12 = rounds(newnum2 * .6);
+	  var set22 = rounds(newnum2 * .65);
+	  var set32 = rounds(newnum2 * .7);
+	  var set42 = rounds(newnum2 * .75);
+	  var set52 = rounds(newnum2 * .775);
+	  var set62 = rounds(newnum2 * .80);
+<!-- 	  alert(set6); -->
+<!--	  alert(set62); --> 
+	  document.getElementById("rep1").innerHTML = 10;
+	  document.getElementById("rep2").innerHTML = 10;
+	  document.getElementById("rep3").innerHTML = 10;
+	  document.getElementById("rep4").innerHTML = 10;
+	  document.getElementById("rep5").innerHTML = 10;
+	  document.getElementById("rep6").innerHTML = "Max";
+	  document.getElementById("rep7").innerHTML = 10;
+	  document.getElementById("rep8").innerHTML = 10;
+	  document.getElementById("rep9").innerHTML = 10;
+	  document.getElementById("rep10").innerHTML = 10;
+	  document.getElementById("rep11").innerHTML = 10;
+	  document.getElementById("rep12").innerHTML = "Max";
+	  
+	  document.getElementById("s1").innerHTML = set1 + "lbs";
+	  document.getElementById("s2").innerHTML = set2 + "lbs";
+	  document.getElementById("s3").innerHTML = set3 + "lbs";
+	  document.getElementById("s4").innerHTML = set4 + "lbs";
+	  document.getElementById("s5").innerHTML = set5 + "lbs";
+	  document.getElementById("s6").innerHTML = set6 + "lbs";
+	  document.getElementById("s7").innerHTML = set12 + "lbs";
+	  document.getElementById("s8").innerHTML = set22 + "lbs";
+	  document.getElementById("s9").innerHTML = set32 + "lbs";
+	  document.getElementById("s10").innerHTML = set42 + "lbs";
+	  document.getElementById("s11").innerHTML = set52 + "lbs";
+	  document.getElementById("s12").innerHTML = set62 + "lbs";
+	} 
+	function calcstr() 
+	{ 
+
+	  var form = document.forms["numform"];
+	  var val1 = form.elements["w1"];
+	  var val2 = form.elements["w2"];
+	  
+	  
+	  var newnum = val1.value * 1.15
+	  var newnum2 = val2.value * 1.15
+	  
+	  var set1 = rounds(newnum * .6);
+	  var set2 = rounds(newnum * .65);
+	  var set3 = rounds(newnum * .7);
+	  var set4 = rounds(newnum * .75);
+	  var set5 = rounds(newnum * .775);
+	  var set6 = rounds(newnum * .80);
+	  
+
+	  var set12 = rounds(newnum2 * .6);
+	  var set22 = rounds(newnum2 * .65);
+	  var set32 = rounds(newnum2 * .7);
+	  var set42 = rounds(newnum2 * .75);
+	  var set52 = rounds(newnum2 * .775);
+	  var set62 = rounds(newnum2 * .80);
+<!-- 	  alert(set6); tests w1 -->
+<!--	  alert(set62); tests w2 -->
+	  document.getElementById("rep1").innerHTML = 5;
+	  document.getElementById("rep2").innerHTML = 5;
+	  document.getElementById("rep3").innerHTML = 5;
+	  document.getElementById("rep4").innerHTML = 5;
+	  document.getElementById("rep5").innerHTML = 5;
+	  document.getElementById("rep6").innerHTML = "Max";
+	  document.getElementById("rep7").innerHTML = 5;
+	  document.getElementById("rep8").innerHTML = 5;
+	  document.getElementById("rep9").innerHTML = 5;
+	  document.getElementById("rep10").innerHTML = 5;
+	  document.getElementById("rep11").innerHTML = 5;
+	  document.getElementById("rep12").innerHTML = "Max";
+	  
+	  document.getElementById("s1").innerHTML = set1 + "lbs";
+	  document.getElementById("s2").innerHTML = set2 + "lbs";
+	  document.getElementById("s3").innerHTML = set3 + "lbs";
+	  document.getElementById("s4").innerHTML = set4 + "lbs";
+	  document.getElementById("s5").innerHTML = set5 + "lbs";
+	  document.getElementById("s6").innerHTML = set6 + "lbs";
+	  document.getElementById("s7").innerHTML = set12 + "lbs";
+	  document.getElementById("s8").innerHTML = set22 + "lbs";
+	  document.getElementById("s9").innerHTML = set32 + "lbs";
+	  document.getElementById("s10").innerHTML = set42 + "lbs";
+	  document.getElementById("s11").innerHTML = set52 + "lbs";
+	  document.getElementById("s12").innerHTML = set62 + "lbs";
+	} 
+	function rounds(x)
+	{
+	  return Math.ceil(x/5)*5;
+	}	
+</script> 
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+
+  <div class="w3-bar-block">
+    <a href="home.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><b>West Point<br>Fitness</b></a>
+    <a href="home.html#workoutgenerator" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Workout Generator</a>
+    <a href="home.html#equipment" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Equipment Locator</a>
+    <a href="home.html#premadeWO" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Premade Workouts</a>
+    <a href="home.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
+  <span>West Point Fitness</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="header">
+    <h1 class="w3-jumbo w3-center"><b>Workout Generator: Back</b></h1>
+
+	<form style="text-align:left" id="numform">
+	  Please enter your barbell row 5-rep max:<br>
+	  <input type="number" name="w1" value = 200 min = 0><br>
+
+	  Please enter your lat pulldown 5-rep max:<br>
+	  <input type="number" name="w2" value = 100 min = 0><br>
+      Is your goal today to improve size or strength?:<br>
+	  <button class="w3-button w3-black w3-hover-yellow" type="button" value='Size' onclick = "calcsz()">Size</button>
+	  <button class="w3-button w3-black w3-hover-yellow" type="button" value='Strength' onclick = "calcstr()">Strength</button>
+	</form>
+	<p></p>
+  Barbell Rows:<br>
+  <table class="w3-table w3-striped w3-border">
+<tr>
+  <th>Set</th><th>Reps</th><th>Weight</th>
+</tr>
+<tr>
+  <td>1</td>  <td id="rep1"></td><td id="s1"></td>
+</tr>
+<tr>
+  <td>2</td><td id="rep2"></td><td id="s2"></td>
+</tr>
+<tr>
+  <td>3</td><td id="rep3"></td><td id="s3"></td>
+</tr>
+<tr>
+  <td>4</td><td id="rep4"></td><td id="s4"></td>
+</tr>
+<tr>
+  <td>5</td><td id="rep5"></td><td id="s5"></td>
+</tr>
+<tr>
+  <td>Final</td><td id="rep6"></td><td id="s6"></td>
+</tr>
+</table>
+ Lat Pulldowns:<br>
+<table class="w3-table w3-striped w3-border">
+<tr>
+<th>Set</th><th>Reps</th><th>Weight</th>
+</tr>
+<tr>
+<td>1</td><td id="rep7"></td><td id="s7"></td>
+</tr>
+<tr>
+<td>2</td><td id="rep8"></td><td id="s8"></td>
+</tr>
+<tr>
+<td>3</td><td id="rep9"</td><td id="s9"></td>
+</tr>
+<tr>
+<td>4</td><td id="rep10"></td><td id="s10"></td>
+</tr>
+<tr>
+<td>5</td><td id="rep11"></td><td id="s11"></td>
+</tr>
+<tr>
+<td>Final</td><td id="rep12"></td><td id="s12"></td>
+</tr>
+</table>
+  </div>
+  </div>
+</div>
+</body>
+</html>
