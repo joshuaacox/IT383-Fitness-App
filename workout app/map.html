@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<div id="googleMap" style="width:100%;height:400px;"></div>
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(39.738570, -104.985670),
+  zoom:9,
+};
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position: {lat: 39.73857, lng: -104.98567}, map: map});
+}
+</script>
+<script async defervar marker = new google.maps.Marker({position: {lat: 39.73857, lng: -104.98567}, map: map});
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANEAPQ40POMk496hnWastK9pT1fQ52SfY&callback=myMap">
+</script>
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d392565.2037547804!2d-105.13529645012136!3d39.76400211690762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b80aa231f17cf%3A0x118ef4f8278a36d6!2sDenver%2C+CO!5e0!3m2!1sen!2sus!4v1555626704608!5m2!1sen!2sus"
+ width="300" height="300" frameborder="1" style="border:20" align="middle"
+ allowfullscreen>
+</iframe>
+
+
+
+</center>
+</body>
+</html>

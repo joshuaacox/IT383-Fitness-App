@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>West Point Workouts</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+
+<script>
+	function gen()
+	{
+	  //alert("hello");
+	  var form = document.forms["numform"];
+	  var w = form.elements["w1"];
+	  var w1 = w.value;
+	  var min = parseInt(w1)
+	  var s1 = min * 60;
+	  //alert(s1);
+	  var ww = form.elements["w2"];
+	  var ww1 = ww.value;
+	  var s2 = parseInt(ww1);
+	  //alert(s2);
+
+	  var stot = s1 + s2;
+	  //alert(stot)
+	  //alert(typeof stot)
+
+	  var t1 = rounddn(stot / 4);
+	  leg1(t1);
+
+	  var t2 = rounddn(stot / 2);
+	  leg2(t2);
+
+	  var t3 = rounddn(stot / 4);
+	  leg3(t3);
+	}
+	function leg1(x)
+	{
+	  //alert(x + " total seconds");
+	  var min = Math.floor(x / 60);
+	  //alert(tt + " minutes");
+	  var sec = x % 60;
+	  //alert(ttt + " seconds");
+	  document.getElementById("time1").innerHTML = "under " + min + " minutes " + sec + " seconds";
+	}
+	function leg2(y)
+	{
+	  var x = y -15;
+	  var t = Math.floor(x/30)*30
+	  var min = Math.floor(t / 60);
+
+	  var sec = t % 60;
+
+	  document.getElementById("time2").innerHTML = "under " + min + " minutes " + sec + " seconds";
+	}
+	function leg3(y)
+	{
+	  var t = y - 15;
+	  var x = Math.floor(t/15)*15
+	  var min = Math.floor(x / 60);
+	  var sec = x % 60;
+	  document.getElementById("time3").innerHTML = "under " + min + " minutes " + sec + " seconds";
+	}
+	function rounddn(x)
+	{
+	  return Math.floor(x);
+	}
+</script>
+
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+
+  <div class="w3-bar-block">
+    <a href="home.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><b>West Point<br>Fitness</b></a>
+    <a href="home.html#workoutgenerator" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Workout Generator</a>
+    <a href="equipment.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Equipment Locator</a>
+    <a href="home.html#premadeWO" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Premade Workouts</a>
+    <a href="home.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
+  <span>West Point Fitness</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="header">
+    <h1 class="w3-jumbo w3-center"><b>Workout Generator: Cardio</b></h1>
+
+  <form style="text-align:left" id = "numform">
+    Please enter your goal 2-mile time (min:sec):<br>
+    <input type="number" name="w1" size="5" value = 12 min = 00> :
+	<input type="number" name="w2" size="5" value = 00 min = 00 max = 59>
+	<br>
+    <br>
+    <button class="w3-button w3-black w3-hover-yellow" type="button" onclick="gen()" value='Generate'>Generate!</button>
+    </form>
+
+    </div>
+	<p style="text-align:left">
+	   Run 5 times through:<br>
+     <table class="w3-table w3-striped w3-border">
+     <tr>
+     <th>Time</th><th>Pace</th>
+     </tr>
+     <tr>
+     <td>30 seconds</td><td>Fast</td>
+     </tr>
+     <tr>
+     <td>30 seconds</td><td>Easy</td>
+     </tr>
+     </table>
+
+     Pace Set:<br>
+    <table class="w3-table w3-striped w3-border">
+    <tr>
+    <th>Leg</th><th>Time</th><th>Distance</th>
+    </tr>
+    <tr>
+    <td>1</td><td id ="time1"></td><td>800m</td>
+    </tr>
+    <tr>
+    <td>2</td><td id = "time2" ></td><td>1600m</td>
+    </tr>
+    <tr>
+    <td>3</td><td id = "time3" ></td><td>800m</td>
+    </tr>
+    </table>
+
+
+  </div>
+	<script>
+	function w3_open() {
+	  document.getElementById("mySidebar").style.display = "block";
+	}
+
+	function w3_close() {
+	  document.getElementById("mySidebar").style.display = "none";
+	}
+	</script>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>West Point Workouts</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-black w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+
+  <div class="w3-bar-block">
+    <a href="home.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow"><b>West Point<br>Fitness</b></a>
+    <a href="home.html#workoutgenerator" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Workout Generator</a>
+    <a href="home.html#equipment" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Equipment Locator</a>
+    <a href="home.html#premadeWO" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Premade Workouts</a>
+    <a href="home.html#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-yellow">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
+  <span>West Point Fitness</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="header">
+    <h1 class="w3-jumbo w3-center"><b>Leg Strength Workout</b></h1>
+
+	<p style="text-align:left">
+
+	</p>
+  Backsquat:<br>
+  <table class="w3-table w3-striped w3-border">
+<tr>
+  <th>Set</th><th>Reps</th><th>Weight</th>
+</tr>
+<tr>
+  <td>1</td><td>5</td><td>195</td>
+</tr>
+<tr>
+  <td>2</td><td>5</td><td>215</td>
+</tr>
+<tr>
+  <td>3</td><td>5</td><td>230</td>
+</tr>
+<tr>
+  <td>4</td><td>5</td><td>255</td>
+</tr>
+<tr>
+  <td>5</td><td>5</td><td>260</td>
+</tr>
+<tr>
+  <td>Final</td><td>Max Reps</td><td>270</td>
+</tr>
+</table>
+ Deadlift:<br>
+<table class="w3-table w3-striped w3-border">
+<tr>
+<th>Set</th><th>Reps</th><th>Weight</th>
+</tr>
+<tr>
+<td>1</td><td>5</td><td>205</td>
+</tr>
+<tr>
+<td>2</td><td>5</td><td>225</td>
+</tr>
+<tr>
+<td>3</td><td>5</td><td>240</td>
+</tr>
+<tr>
+<td>4</td><td>5</td><td>265</td>
+</tr>
+<tr>
+<td>5</td><td>5</td><td>275</td>
+</tr>
+<tr>
+<td>Final</td><td>Max Reps</td><td>285</td>
+</tr>
+</table>
+  </div>
+  <script>
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+  </script>
